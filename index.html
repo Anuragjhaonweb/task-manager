@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MY TASK MANAGER — Modern Task Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header-main">
+      <h1><span class="logo-icon">📝</span> MY TASK MANAGER</h1>
+      <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
+    </header>
+
+    <div class="app-container">
+      <aside class="sidebar" aria-label="Task Categories">
+        <ul class="category-list">
+          <li class="category-item active" data-category="all"><span>📋</span> All</li>
+          <li class="category-item" data-category="work"><span>💼</span> Work</li>
+          <li class="category-item" data-category="personal"><span>🏠</span> Personal</li>
+          <li class="category-item" data-category="shopping"><span>🛒</span> Shopping</li>
+          <li class="category-item" data-category="learning"><span>🎓</span> Learning</li>
+        </ul>
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-value" id="totalTasks">0</div>
+            <div class="stat-label">Total</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="completedTasks">0</div>
+            <div class="stat-label">Completed</div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content" aria-label="Task Content">
+        <section class="intro-text">
+          <h2>My Tasks</h2>
+          <p>Organize your life like a productivity beast 💼🧠</p>
+        </section>
+
+        <section class="task-input-container">
+          <span class="input-icon">+</span>
+          <input id="taskInput" type="text" class="task-input" placeholder="Add a new task and press Enter..." aria-label="New task input"/>
+        </section>
+
+        <section id="taskGroups" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <footer>
+      <p>TaskFlow — Click to edit • Drag to reorder • Toggle themes</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
